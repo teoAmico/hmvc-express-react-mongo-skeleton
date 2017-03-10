@@ -1,0 +1,5 @@
+{
+  "name": "application",
+  "version": "0.0.1",
+  "description": "The Application module provided by the skeleton is used to provide bootstrapping, error and routing configuration to the whole application. It is usually used to provide application level controllers for, say, the home page of an application."
+}
