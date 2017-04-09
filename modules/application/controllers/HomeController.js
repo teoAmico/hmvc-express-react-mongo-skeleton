@@ -10,7 +10,7 @@ class HomeController extends BaseController{
     }
 
     index(req, res, next){
-        self.HomeService.readPosts().then(posts =>{
+        self.HomeService.readPosts().then(posts => {
             console.log(posts)
             res.send(posts)
         }).catch(error => {
