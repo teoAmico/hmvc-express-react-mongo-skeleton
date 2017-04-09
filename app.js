@@ -1,5 +1,8 @@
 var express = require('express');
 var path = require('path');
+var Promise = require('rsvp').Promise;
+var mongo = require('mongodb')
+var assert = require('assert')
 
 // available node modules
 // var favicon = require('serve-favicon');
@@ -9,8 +12,27 @@ var path = require('path');
 
 //globals constant available in each config modules folder
 CONFIG = require('./config');
+
+//connect to mongodb and create global promise object
+if(CONFIG.database.mongodb.database){
+    mongodb = function (callback) {
+        return new Promise(function (resolve, reject) {
+            mongo.connect(CONFIG.database.mongodb.database, CONFIG.database.mongodb.user, CONFIG.database.mongodb.password, function (error, db) {
+                if (error) {
+                    reject(error)
+                } else {
+                    var result = callback(db)
+                    db.close()
+                    resolve(result)
+                }
+            })
+        })
+    }
+}
+
 //require all modules
 var application = require('./modules/application/module');
+
 
 //create app
 var app = express();

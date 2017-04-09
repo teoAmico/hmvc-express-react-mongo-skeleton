@@ -2,7 +2,7 @@
 //global CONFIG is available from /app.js
 var config = {
     app: CONFIG.app,
-    database: CONFIG.database
+    db: CONFIG.database
 }
 
 
