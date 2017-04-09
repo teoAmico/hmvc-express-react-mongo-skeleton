@@ -1,6 +1,6 @@
-var constants = require('../.env');
+const constants = require('../.env');
 
-var app = {
+const app = {
   application_env: constants.APPLICATION_ENV
 };
 module.exports = app;

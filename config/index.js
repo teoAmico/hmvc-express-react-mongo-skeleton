@@ -1,10 +1,10 @@
-var app = require("./app");
-var database = require("./database");
+const app = require("./app");
+const database = require("./database");
 
 //load all global configuration
-var config = {
+const config = {
     app : app,
-    database: database
+    db: database
 };
 
 module.exports = config;

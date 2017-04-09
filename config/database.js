@@ -1,5 +1,5 @@
-var constants = require('../.env');
-var database = {
+const constants = require('../.env');
+const database = {
     mongodb: {
             database: constants.MONGODB_URL,
             user: constants.MONGODB_USER,

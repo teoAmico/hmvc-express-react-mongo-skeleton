@@ -1,12 +1,17 @@
+'use-strict'
 var express = require('express');
-var application = require('../middlewares/application');
 var app = express();
 
-//require middleware
-app.use(application.test);
+var TestMiddleware = require('../middlewares/TestMiddleware');
+var testMiddleware = new TestMiddleware() 
+
+app.use(testMiddleware.test);
 
 //set up module routes
-var home = require('../controllers/homeController');
+var HomeController = require('../controllers/HomeController');
+var HomeService = require('../services/HomeService');
+var home = new HomeController(new HomeService())
+
 app.get('/',  home.index);
 
 module.exports = app;

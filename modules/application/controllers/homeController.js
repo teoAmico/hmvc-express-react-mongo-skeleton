@@ -1,35 +1,23 @@
-var config = require('../config/config')
-//Services
-var homeService = require('../services/homeService')
+'use-strict'
+var BaseController = require('./BaseController')
+var self = this
 
+class HomeController extends BaseController{
 
-//Actions Controller
-var actions = {}
+    constructor(HomeService){
+        super()
+        self.HomeService = HomeService
+    }
 
-actions.index = function(req, res, next){
-    homeService.setMessage('Hello world form MONGODB').then(function(result) {
-        if (result) {
-            homeService.getCountMessages().then(function(total){
-                homeService.getMessage().then(function (result) {
-                    var list = '';
-                    result.forEach(function (value, err) {
-                        list = list + value.message.toString() + '<br/>'
-                    })
-                    res.send('Enviroment: ' + config.app.application_env + '<br/>' +
-                            'Show Records: ' + '<br/>' +
-                        'Total records saved: ' + total + '<br/>' +
-                        list)
-                })
-            })
-
-        }else{
-            res.send('Message not saved!')
-        }
-    },function (error) {
-        console.log(error)
-        res.send('Error see log')
-    })
+    index(req, res, next){
+        self.HomeService.readPosts().then(posts =>{
+            console.log(posts)
+            res.send(posts)
+        }).catch(error => {
+            console.log(error)
+            res.send('500 An error occured!')
+        })
+    }
 }
 
-
-module.exports = actions
+module.exports = HomeController

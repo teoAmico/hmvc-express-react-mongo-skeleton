@@ -1,9 +1,8 @@
 //setup module configuration here
 //global CONFIG is available from /app.js
-var config = {
+const config = {
     app: CONFIG.app,
-    db: CONFIG.database
+    db: CONFIG.db
 }
-
 
 module.exports = config;
