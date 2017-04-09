@@ -1,6 +1,6 @@
 # README #
 
-Exporess + MongoDb Skeleton App.
+Express + MongoDb Skeleton App.
 
 ### What is this repository for? ###
 
