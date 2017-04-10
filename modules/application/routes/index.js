@@ -2,16 +2,20 @@
 var express = require('express');
 var app = express();
 
-var TestMiddleware = require('../middlewares/TestMiddleware');
-var testMiddleware = new TestMiddleware() 
 
+var MiddlewareFactory = require('../factory/MiddlewareFactory');
+var middlewareFactory = new MiddlewareFactory() 
+
+var testMiddleware = middlewareFactory.createTestMiddleware()
 app.use(testMiddleware.test);
 
-//set up module routes
-var HomeController = require('../controllers/HomeController');
-var HomeService = require('../services/HomeService');
-var home = new HomeController(new HomeService())
 
-app.get('/',  home.index);
+var ControllerFactory = require('../factory/ControllerFactory');
+var controllerFactory = new ControllerFactory()
+
+var homeController = controllerFactory.createHomeController()
+
+//set up module routes
+app.get('/',  homeController.index);
 
 module.exports = app;

@@ -13,7 +13,7 @@ var path = require('path');
 CONFIG = require('./config');
 
 
-//require all modules
+//require all app modules
 var application = require('./modules/application/module');
 
 
@@ -28,10 +28,5 @@ app.use(express.static(path.join(__dirname, 'storage/app/public')));
 
 //load all module
 app.use(application.app);
-
-//show log messages when application run on local enviroment
-if(CONFIG.app.application_env === 'local'){
-    console.log('Loaded module: ' + application.info.name );
-}
 
 module.exports = app;
