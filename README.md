@@ -1,6 +1,9 @@
 # README #
 
-Express + MongoDb + ReactJS Skeleton App.
+Scaffolding app designed it to reuse module across multiple projects and to be scalable.
+
+Include:
+ExpressJS + MongoDb + ReactJS (jsx) + Mocha + Template engine EJS + SCSS + Mongodb Migrations.
 
 ### What is this repository for? ###
 
@@ -11,4 +14,5 @@ Express + MongoDb + ReactJS Skeleton App.
 
 * Copy .env.example in .env and edit the configuration 
 * go to the folder and run this command: npm install
+* npm run dev
 * start server-watch script with this command: npm run server-watch
