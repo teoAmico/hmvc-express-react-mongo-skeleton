@@ -1,6 +1,6 @@
 # README #
 
-Express + MongoDb Skeleton App.
+Express + MongoDb + ReactJS Skeleton App.
 
 ### What is this repository for? ###
 
