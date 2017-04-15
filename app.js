@@ -26,6 +26,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 //give access to storage/app/public folder for uploaded file
 app.use(express.static(path.join(__dirname, 'storage/app/public')));
 
+app.set('view engine', 'ejs')
+
 //load all module
 app.use(application.app);
 
