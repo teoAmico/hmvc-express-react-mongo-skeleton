@@ -1,3 +1,4 @@
+'use-strict'
 //https://github.com/emirotin/mongodb-migrations
 const config = require('../.env')
 module.exports = {
