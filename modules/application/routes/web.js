@@ -4,7 +4,7 @@ var app = express()
 
 
 var MiddlewareFactory = require('../factory/MiddlewareFactory')
-var middlewareFactory = new MiddlewareFactory() 
+var middlewareFactory = new MiddlewareFactory()
 
 var TestMiddleware = middlewareFactory.createTestMiddleware()
 app.use(TestMiddleware.test)
@@ -18,6 +18,6 @@ var ServiceFactory = require('../factory/ServiceFactory')
 var serviceFactory = new ServiceFactory()
 
 //set up module routes
-app.get('/',  HomeController.index)
+app.get('/', HomeController.index)
 
 module.exports = app

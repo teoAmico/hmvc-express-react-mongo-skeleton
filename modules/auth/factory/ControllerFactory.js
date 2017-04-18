@@ -1,4 +1,3 @@
-
 'use-strict'
 var ServiceFactory = require('./ServiceFactory')
 var AuthController = require('../controllers/AuthController')
@@ -6,11 +5,11 @@ var self = this
 
 class ControllerFactory {
 
-    constructor(){
+    constructor() {
         self.serviceFactory = new ServiceFactory()
     }
 
-    createAuthController(){
+    createAuthController() {
         return new AuthController(self.serviceFactory.createAuthService())
     }
 

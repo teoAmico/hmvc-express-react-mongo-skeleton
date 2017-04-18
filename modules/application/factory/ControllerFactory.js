@@ -6,11 +6,11 @@ var self = this
 
 class ControllerFactory {
 
-    constructor(){
+    constructor() {
         self.serviceFactory = new ServiceFactory
     }
 
-    createHomeController(){
+    createHomeController() {
         return new HomeController(self.serviceFactory.createHomeService())
     }
 }

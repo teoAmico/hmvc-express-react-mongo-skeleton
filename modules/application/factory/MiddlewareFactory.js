@@ -1,11 +1,10 @@
-
 'use-strict'
 var TestMiddleware = require('../middlewares/TestMiddleware')
 var self = this
 
 class MiddlewareFactory {
 
-    createTestMiddleware(){
+    createTestMiddleware() {
         return new TestMiddleware()
     }
 }

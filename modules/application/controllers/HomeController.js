@@ -3,14 +3,14 @@ var BaseController = require('./BaseController')
 var self = this
 const path = require('path')
 
-class HomeController extends BaseController{
+class HomeController extends BaseController {
 
-    constructor(HomeService){
+    constructor(HomeService) {
         super()
         self.HomeService = HomeService
     }
 
-    index(req, res, next){
+    index(req, res, next) {
         self.HomeService.readPosts().then(posts => {
             console.log(posts)
             var data = {

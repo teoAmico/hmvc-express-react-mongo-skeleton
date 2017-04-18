@@ -1,4 +1,5 @@
 'use-strict'
+var self = this
 
 class MiddlewareFactory {
 

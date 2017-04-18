@@ -1,6 +1,8 @@
+'use-strict'
+var self = this
 
 class TestMiddleware {
-    test(req,res,next){
+    test(req, res, next) {
         console.log("Call application middleware: test")
         next();
     }
