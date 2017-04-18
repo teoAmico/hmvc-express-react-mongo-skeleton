@@ -1,8 +1,6 @@
 'use-strict'
-var glob = require('../../../config')
-const config = {
-    app: glob.app,
-    db: glob.db
+var config = require('../../../config')
+module.exports = {
+    app: config.app,
+    db: config.db
 }
-
-module.exports = config

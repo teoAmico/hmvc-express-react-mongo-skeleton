@@ -1,12 +1,10 @@
 'use-strict'
-const constants = require('../.env')
+const config = require('../.env')
 
-const database = {
+module.exports  = {
     mongodb: {
-            database: constants.MONGODB_URL,
-            user: constants.MONGODB_USER,
-            password: constants.MONGODB_PASSWORD
+            database: config.MONGODB_URL,
+            user: config.MONGODB_USER,
+            password: config.MONGODB_PASSWORD
     }
 }
-
-module.exports = database

@@ -2,9 +2,7 @@
 const app = require("./app")
 const database = require("./database")
 
-const config = {
+module.exports = {
     app : app,
-    db: database
+   db: database
 }
-
-module.exports = config
