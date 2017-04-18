@@ -1,10 +1,5 @@
-<html>
-    <head>
-        <title><%= title %></title>
-    </head>
-    <body>
-        <div id="root"></div>
-        <script src="js/app.min.js" type="application/javascript"></script>
-        <script src="js/application.min.js" type="application/javascript"></script>
-    </body>
-</html>
+<%- contentFor('moduleStylesheets') %>
+<%- contentFor('moduleContent') %>
+<div id="root"></div>
+<%- contentFor('moduleScripts') %>
+<script src="js/application.min.js" type="application/javascript"></script>

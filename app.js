@@ -10,6 +10,7 @@ var bodyParser = require('body-parser')
 //app modules
 var application = require('./modules/application/module')
 var auth = require('./modules/auth/module')
+var ejsLayouts = require("express-ejs-layouts")
 
 //connect mongoose to database
 mongoose.connect(config.db.mongodb.database)
@@ -28,6 +29,8 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.static(path.join(__dirname, 'storage/app/public')))
 //setup template engine
 app.set('view engine', 'ejs')
+app.use(ejsLayouts)
+app.set('layout', '../modules/application/resources/views/partials/layout.ejs');
 
 //load all app modules
 app.use(auth)
