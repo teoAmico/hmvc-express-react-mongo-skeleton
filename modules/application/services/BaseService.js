@@ -1,8 +1,8 @@
 'use-strict'
 const mongoConfig = require('../config/config').db.mongodb
 var Promise = require('rsvp').Promise
-const mongo = require('mongodb')
-const mongoose = require('mongoose')
+var mongo = require('mongodb')
+var mongoose = require('mongoose')
 var self = this
 
 class BaseService {

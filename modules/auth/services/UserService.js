@@ -43,7 +43,7 @@ class UserService extends BaseService {
             if(err){
                 return cb(err)
             }
-            cb(null, isMatch)
+            return cb(null, isMatch)
         })
     }
 

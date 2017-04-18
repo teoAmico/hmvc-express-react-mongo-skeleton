@@ -17,7 +17,4 @@ if(config.app.application_env === 'local'){
     console.log('Loaded module: ' + info.name )
 }
 
-module.exports = {
-    app : app,
-    info : info
-}
+module.exports = app

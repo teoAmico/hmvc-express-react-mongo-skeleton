@@ -30,7 +30,7 @@ app.use(express.static(path.join(__dirname, 'storage/app/public')))
 app.set('view engine', 'ejs')
 
 //load all app modules
-app.use(auth.app)
-app.use(application.app)
+app.use(auth)
+app.use(application)
 
 module.exports = app

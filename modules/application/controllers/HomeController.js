@@ -1,7 +1,7 @@
 'use-strict'
 var BaseController = require('./BaseController')
+var path = require('path')
 var self = this
-const path = require('path')
 
 class HomeController extends BaseController {
 

@@ -11,7 +11,6 @@ var controllerFactory = new ControllerFactory()
 var ServiceFactory = require('../factory/ServiceFactory')
 var serviceFactory = new ServiceFactory()
 
-
 //set up module routes
 app.get('/',  function(req,res,next){})
 

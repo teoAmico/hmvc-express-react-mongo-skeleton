@@ -2,7 +2,7 @@
 const mongoConfig = require('../config/config').db.mongodb
 var Promise = require('rsvp').Promise
 var mongo = require('mongodb')
-const mongoose = require('mongoose')
+var mongoose = require('mongoose')
 var self = this
 
 class BaseService {
