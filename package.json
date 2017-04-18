@@ -1,5 +1,5 @@
 {
-  "name": "skeleton",
+  "name": "webapp",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -11,14 +11,21 @@
     "mm": "mm --config=./config/migration.js"
   },
   "dependencies": {
+    "bcrypt": "^1.0.2",
     "body-parser": "~1.16.0",
     "cookie-parser": "~1.4.3",
     "express": "~4.14.1",
+    "jsonwebtoken": "^7.3.0",
+    "material-ui": "^0.17.4",
     "mongodb": "^2.2.25",
+    "mongoose": "^4.9.5",
     "morgan": "~1.7.0",
     "node-sass-middleware": "0.9.8",
+    "passport": "^0.3.2",
+    "passport-jwt": "^2.2.1",
     "react": "^15.5.3",
     "react-dom": "^15.5.3",
+    "react-tap-event-plugin": "^2.0.1",
     "rsvp": "^3.5.0",
     "serve-favicon": "~2.3.2"
   },

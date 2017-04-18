@@ -1,5 +1,5 @@
 'use-strict'
-var HomeService = require('../services/HomeService');
+var HomeService = require('../services/HomeService')
 var self = this
 
 class ServiceFactory {

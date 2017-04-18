@@ -1,9 +1,9 @@
 
 'use-strict'
-var ServiceFactory = require('./ServiceFactory');
-var HomeController = require('../controllers/HomeController');
-
+var ServiceFactory = require('./ServiceFactory')
+var HomeController = require('../controllers/HomeController')
 var self = this
+
 class ControllerFactory {
 
     constructor(){

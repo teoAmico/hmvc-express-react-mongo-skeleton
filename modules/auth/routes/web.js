@@ -2,22 +2,23 @@
 var express = require('express')
 var app = express()
 
+var passport = require('passport')
+app.use(passport.initialize())
 
 var MiddlewareFactory = require('../factory/MiddlewareFactory')
 var middlewareFactory = new MiddlewareFactory() 
 
-var TestMiddleware = middlewareFactory.createTestMiddleware()
-app.use(TestMiddleware.test)
-
-
 var ControllerFactory = require('../factory/ControllerFactory')
 var controllerFactory = new ControllerFactory()
-var HomeController = controllerFactory.createHomeController()
+var AuthController = controllerFactory.createAuthController()
 
 var ServiceFactory = require('../factory/ServiceFactory')
 var serviceFactory = new ServiceFactory()
+var AuthService = serviceFactory.createAuthService()
+
+AuthService.authentication(passport)
 
 //set up module routes
-app.get('/',  HomeController.index)
+app.get('/login', AuthController.login)
 
-module.exports = app
+module.exports = app;

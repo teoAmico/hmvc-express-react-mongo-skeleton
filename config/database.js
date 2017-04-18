@@ -1,4 +1,6 @@
-const constants = require('../.env');
+'use-strict'
+const constants = require('../.env')
+
 const database = {
     mongodb: {
             database: constants.MONGODB_URL,
@@ -7,4 +9,4 @@ const database = {
     }
 }
 
-module.exports = database;
+module.exports = database

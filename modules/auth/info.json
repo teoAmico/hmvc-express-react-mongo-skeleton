@@ -1,0 +1,5 @@
+{
+  "name": "auth",
+  "version": "0.0.1",
+  "description": "Implementation of Passport and JWT libraries"
+}
